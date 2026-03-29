@@ -3,8 +3,8 @@ import React from "react";
 const Navbar = () => {
   return (
     <div>
-      <div className="w-full ">
-        <div className=" px-2 md:px-10 lg:px-37 navbar bg-base-100 shadow-sm">
+      <div className="w-full">
+        <div className="px-2 md:px-10 lg:px-37 navbar bg-base-100 shadow-sm">
           <div className="navbar-start">
             <div className="dropdown">
               <div
@@ -105,6 +105,8 @@ const Navbar = () => {
                   </div>
                 </div>
               </div>
+
+              {/* Login Button */}
               <h2>
                 <a
                   href="#"
