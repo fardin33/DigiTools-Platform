@@ -71,7 +71,7 @@ const GetStarted = () => {
 
   return (
     <div>
-      <div className="w-full mt-8 font-sans bg-gray-50/50">
+      <div className="w-full mt-10 font-sans bg-gray-50/50">
         <div className="px-5 py-12 md:px-12 lg:px-37 lg:py-20">
           {/* Header Section */}
           <div className="text-center mb-12 lg:mb-16">
