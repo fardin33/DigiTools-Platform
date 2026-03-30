@@ -10,7 +10,7 @@ const toolsData = [
     period: "/Mo",
     badge: "Best Seller",
     badgeStyles: "bg-orange-100 text-orange-600",
-    icon: "📝", 
+    icon: "📝",
     features: [
       "Unlimited AI generations",
       "50+ writing templates",

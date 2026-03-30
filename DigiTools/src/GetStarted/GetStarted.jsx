@@ -1,5 +1,7 @@
 import React from "react";
 
+import userImg from "../assets/images/user.png";
+
 const GetStarted = () => {
   const steps = [
     {
@@ -97,7 +99,7 @@ const GetStarted = () => {
 
                 {/* Icon */}
                 <div className="w-16 h-16 md:w-20 md:h-20 bg-purple-50 rounded-full flex items-center justify-center mb-6">
-                  {step.icon}
+                  <img src={userImg} alt="" />
                 </div>
 
                 {/* title & Description */}
