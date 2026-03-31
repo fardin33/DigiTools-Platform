@@ -10,7 +10,7 @@ const CardUi = ({ tool, addToCart }) => {
       setIsAdded(true);
 
       // React Toastify
-      toast.success(`${tool.name} added to cart!`);
+      toast.success(`${tool.name} added to cart! 🎉`);
     }
   };
 
