@@ -14,7 +14,7 @@ const PremiumTools = ({ toolsPromise, addToCart }) => {
           ))}
         </div>
       </div>z
-    </div>
+    </div> 
   );
 };
 

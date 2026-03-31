@@ -10,6 +10,10 @@ import GetStarted from "./Components/GetStarted/GetStarted";
 import SimplePricing from "./Components/SimplePricing/SimplePricing";
 import TransformWorkflow from "./Components/TransformWorkflow/TransformWorkflow";
 
+// React Toastify Imports
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 const fetchToolsData = async () => {
   const res = await fetch("/toolsData.json");
   return res.json();
@@ -20,7 +24,7 @@ function App() {
   const [activeTab, setActiveTab] = useState("products");
   const [cart, setCart] = useState([]);
 
-  // Add Tools :
+  // Add Tools to Cart
   const addToCart = (product) => {
     const isExist = cart.find((item) => item.id === product.id);
     if (!isExist) {
@@ -28,16 +32,20 @@ function App() {
     }
   };
 
-  // Remove Tools :
+  // Remove Single Tool
   const removeFromCart = (id) => {
-    setCart((prev) => prev.filter((item) => item.id !== id));
+    setCart((prevCart) => prevCart.filter((item) => item.id !== id));
+  };
+
+  // Clear Entire Cart (Checkout er somoy call hobe)
+  const clearCart = () => {
+    setCart([]);
   };
 
   return (
     <>
-      <Navbar />
+      <Navbar cartCount={cart.length} />
       <SuperCharge />
-
       <main className="min-h-screen font-sans">
         <div className="px-5 py-12 md:px-10 lg:px-37">
           <Toggle
@@ -61,16 +69,26 @@ function App() {
                 />
               </Suspense>
             ) : (
-              <CartCheckout cartItems={cart} removeFromCart={removeFromCart} />
+              <CartCheckout
+                cartItems={cart}
+                removeFromCart={removeFromCart}
+                clearCart={clearCart}
+              />
             )}
           </div>
         </div>
       </main>
-
       <GetStarted />
       <SimplePricing />
       <TransformWorkflow />
       <Footer />
+
+      {/* Toast Container for Notifications */}
+      <ToastContainer
+        position="top-right"
+        autoClose={2000}
+        hideProgressBar={false}
+      />
     </>
   );
 }
