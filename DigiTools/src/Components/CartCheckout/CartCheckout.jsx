@@ -75,7 +75,10 @@ const CartCheckout = ({
                   </div>
                 </div>
                 <button
-                  onClick={() => removeFromCart(item.id)}
+                  onClick={() => {
+                    removeFromCart(item.id);
+                    toast.error("Item removed successfully!");
+                  }}
                   className="text-red-500 hover:text-red-700 font-semibold text-sm px-3 py-1"
                 >
                   Remove
