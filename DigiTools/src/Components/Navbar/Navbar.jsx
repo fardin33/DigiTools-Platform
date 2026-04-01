@@ -4,7 +4,7 @@ const Navbar = ({ cartCount }) => {
   return (
     <div className="sticky top-0 z-50">
       <div className="w-full">
-        <div className="px-2 md:px-7 lg:px-37 navbar bg-base-100 shadow-md">
+        <div className="px-2 md:px-7 lg:px-37 lg:gap-3 navbar bg-base-100 shadow-md">
           <div className="navbar-start">
             <div className="dropdown">
               <div
